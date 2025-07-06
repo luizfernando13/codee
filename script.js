@@ -1,3 +1,5 @@
+
+window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const loader = document.getElementById('loader');
   const content = document.getElementById('content');

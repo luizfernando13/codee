@@ -35,10 +35,18 @@ body {
   flex-direction: column;
   background-color: rgba(0,0,0,0.8);
   z-index: 1000;
+  animation: fadeOut 0.5s ease 2s forwards;
 }
 
 .loader.hidden {
   display: none;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .loader .spinner {
@@ -60,6 +68,26 @@ body {
 }
 
 .play-button {
+  padding: 30px 60px;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #ff00cc, #ff9900, #ffff00, #ff00cc);
+  background-size: 300% 300%;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255,0,204,0.8), 0 0 40px rgba(255,153,0,0.8);
+  text-shadow: 0 0 10px rgba(255,255,255,0.9);
+  animation: buttonPulse 1.5s ease-in-out infinite,
+             buttonBgShift 6s linear infinite;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.play-button:hover {
+  transform: scale(1.15);
+=======
   padding: 20px 40px;
   font-size: 24px;
   background: #ff0066;
@@ -78,4 +106,21 @@ body {
 
 .play-button:active {
   transform: scale(1);
+}
+
+@keyframes buttonBgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(255,0,204,0.8), 0 0 40px rgba(255,153,0,0.8);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(255,0,204,1), 0 0 60px rgba(255,153,0,1);
+  }
 }
