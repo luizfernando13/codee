@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     loader.classList.add('hidden');
     content.classList.remove('hidden');
-  }, 1000);
+  }, 2000);
 
   playButton.addEventListener('click', () => {
     audio.currentTime = 0;
