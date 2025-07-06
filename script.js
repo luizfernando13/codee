@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loader.classList.add('hidden');
     content.classList.remove('hidden');
   }, 2000);
+  }, 1000);
 
   playButton.addEventListener('click', () => {
     audio.currentTime = 0;
