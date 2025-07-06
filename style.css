@@ -87,6 +87,21 @@ body {
 
 .play-button:hover {
   transform: scale(1.15);
+=======
+  padding: 20px 40px;
+  font-size: 24px;
+  background: #ff0066;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
 .play-button:active {
